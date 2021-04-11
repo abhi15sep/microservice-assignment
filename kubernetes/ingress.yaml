@@ -10,10 +10,6 @@ spec:
     - host: myapi.com
       http:
         paths:
-          - path: /health
-            backend:
-              serviceName: service-1
-              servicePort: 80
           - path: /api
             backend:
               serviceName: service-1
