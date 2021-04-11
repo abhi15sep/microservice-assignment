@@ -5,7 +5,7 @@ This is simple nodejs based application designed to showcase microservices in ku
 Document describes environment used in this showcase.
 > [Environment](docs/Environment/README.md)
 
-## 3. Repository Structure
+# 3. Repository Structure
 The main levels of the repository directory tree are laid out as follows 
 ```
 .
