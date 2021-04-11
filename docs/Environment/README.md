@@ -1,11 +1,12 @@
 # Environment
 
 Here are the dependencies (recommended latest version) needed to run this application
-- Ubuntu 20
+- Ubuntu 20.04
 - Kubernetes
 - VirtualBox Hypervisor
 - Minikube
 - Docker
+- Nodejs
 ### How to deploy and run application (all services)
 Enable some of the following minikube addons
 ```bash
