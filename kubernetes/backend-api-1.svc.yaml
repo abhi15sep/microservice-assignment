@@ -1,0 +1,16 @@
+#
+# Backend api 1 ClusterIP.
+#
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: service-1
+spec:
+  type: ClusterIP
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 9010
+  selector:
+    app: service-1

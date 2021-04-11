@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  service-1:
+    image: ${DOCKER_REG}microservices/service-1${DOCKER_TAG}
+    build: 
+      context: .
+      dockerfile: services/service-1/Dockerfile
+      args: 
+        build_info: Built from Docker compose
+    ports: 
+      - 9010:9010
+    environment:
+      - PORT=9010
+      - SERVICE_API2_ENDPOINT=http://service-2:3020
+    networks: 
+      - microservice-network
+
+  service-2:
+    image: ${DOCKER_REG}microservices/service-2${DOCKER_TAG}
+    build: 
+      context: .
+      dockerfile: services/service-2/Dockerfile
+      args: 
+        build_info: Built from Docker compose
+    #ports: 
+    #  - 9020:3020
+    expose:
+      - 3020
+    depends_on:
+      - service-1
+    environment:
+      - PORT=3020
+    networks: 
+      - microservice-network
+
+networks:
+  microservice-network:
