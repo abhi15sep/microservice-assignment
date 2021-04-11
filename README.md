@@ -1,9 +1,10 @@
 # Overview
 This is simple nodejs based application designed to showcase microservices in kubernetes. Application contains two REST api services to provide a JSON response over HTTP.
 
-[Dockerized Microservices](docs/part-1.png)
+PART-1
+![Dockerized Microservices](docs/part-1.png)
 
-## Docker hosted application (Cretaed Only for Testing, not part of assignment)
+## Docker hosted application (For local development only)
 Simplyfied overal structure of application networking.
 ![Docker application structure](docs/Docker_Architecture.png)
 
@@ -20,7 +21,6 @@ The main levels of the repository directory tree are laid out as follows
 │   └── service-1           NodeJS /api service
 |   └── service-2           NodeJS internal /reverse service
 ├── docs                    Documentation
-├── scripts                 utility scripts 
 ├── kubernetes              Kubernetes installation scripts to setup application to kubernetes.
 ├── docker-compose.yml      Docker compose to setup application to docker.
 ```
@@ -31,7 +31,7 @@ Document describes environment used in this showcase.
 > [Environment](docs/Environment/README.md)
 
 
-# Docker application quick launch (Only to test docker container locally)
+# Docker application quick launch (For local development only)
 Document uses ubuntu terminal to show docker image build and started service for quick application testing. Finally starts containers in local docker service and has some curl based test cases.
 > [Docker application quick launch](docs/DockerApplicationQuickLaunch/README.md)
 
