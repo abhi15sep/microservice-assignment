@@ -40,4 +40,29 @@ Document uses ubuntu terminal to show docker image build and started service for
 Document uses Ubuntu terminal to show docker image build and to deploy them to local kubernetes cluster. Follw the instructions mentioned to deploy and test application in kubernetes cluster.
 > [Kubernetes application quick launch](docs/KubernetesApplicationQuickLaunch/README.md)
 
+# Deploy application in EKS
+![Kubernetes EKS deployment](docs/k8s_deployment.png)
+Things need to consider for production deployment.
+1. Terrafrom Iac should be used instead of k8s manifest file for EKS cluster and application stack deployment.
+2. ECR should be used to store docker images.
+3. Packer can be used to build docker image and to push the image in AWS ECR.
+5. Ansible can be used install required software in docker image using ansible provisioner.
+6. For backups and restores, use Velero and store backups in Amazon S3 Buckets that are protected against deletion, and enable versioning and encryption.
+7. Use Hashicorp consul and vault for configuration and secrets management.
+8. ExternalDNS to add dynamic DNS resource records.
+9. IRSA - Provide AWS IAM roles for pods running on K8s.
+10. Implement security features such as Pod Security Policy (PSP) and Open Policy Agent (OPA).
+11. Prometheus and Grafana can be installed in EKS cluster for monitoring using helm chart.
+4. Jenkins or other CI/CD tools should be used to build docker image and deploy it in EKS kubernetes cluster.
+
+NOTE: Isto can be used as service-mesh as it provides many features like circuit-breaker, mtls, fault-injection, canary deployment etc
+
+How to avoid downtime ?
+Many strategy'scan be followed to avoid outage like:
+1. Configuration of pod autoscalar
+2. Configuration of cluster autoscaler using helm charts
+3. Monitoring of EKS cluster using different tools like dynatrace etc
+4. Blue-Green deployment strategy to avoid outage.
+
+
 
