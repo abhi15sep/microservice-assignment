@@ -20,5 +20,5 @@ minikube start --driver=docker
 ```
 Add the following code to `/etc/hosts` so that the cluster can be accessed through the domains `myapi.com`
 ```
-<minikube ip> myapp.com
+<minikube ip> myapi.com
 ```
