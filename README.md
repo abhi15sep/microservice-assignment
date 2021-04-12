@@ -2,7 +2,7 @@
 This is simple nodejs based application designed to showcase microservices in kubernetes. Application contains two REST api services to provide a JSON response over HTTP.
 
 # 2. Environment
-Document describes environment used in this showcase.
+Document describes initial environment setup required for this showcase.
 > [Environment](docs/Environment/README.md)
 
 # 3. Repository Structure
@@ -26,7 +26,7 @@ Simplyfied overal structure of application networking.
 
 
 ## 4.2 Docker application quick launch (For local development only)
-Document uses ubuntu terminal to show docker image build and started service for quick application testing. Finally starts containers in local docker service and has some curl based test cases.
+Follow instructions in document to test PART-1 of assignment using docker container.
 > [Docker application quick launch](docs/DockerApplicationQuickLaunch/README.md)
 
 # 5. PART-2 & PART-3
@@ -37,11 +37,12 @@ Simplyfied overal structure of application networking.
 ![Kubernetes application structure](docs/Kubernetes_Archicture.png)
 
 ## 5.2 Kubernetes application quick launch
-Document uses Ubuntu terminal to show docker image build and to deploy them to local kubernetes cluster. Follw the instructions mentioned to deploy and test application in kubernetes cluster.
+Follw the instructions to test PART-2 of assignment. It includes instruction to test and deploy the application in kubernetes cluster.
 > [Kubernetes application quick launch](docs/KubernetesApplicationQuickLaunch/README.md)
 
-## 5.3 Deploy application in EKS
+## 5.3 Deploy application in EKS (PART-3)
 ![Kubernetes EKS deployment](docs/k8s_deployment.png)
+
 Things need to consider for production deployment.
 1. Terrafrom Iac should be used instead of k8s manifest file for EKS cluster and application stack deployment.
 2. ECR should be used to store docker images.
